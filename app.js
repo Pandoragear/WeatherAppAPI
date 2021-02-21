@@ -4,6 +4,10 @@ var name = document.querySelector(".name");
 var desc = document.querySelector(".desc");
 var temp = document.querySelector(".temp");
 
+button.addEventListener('click', function(){
 fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=c4c17f7487428c23c01090220e623f3b')
 . then(response => response.json())
 .then(data => console.log(data))
+
+.catch(err => alert("Wrong City Name!!"))
+})
